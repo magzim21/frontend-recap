@@ -2,7 +2,7 @@
     /* width: 400px; */
     overflow: scroll;
     padding: 1vw;
-    font-size: 1vw;
+    font-size: 15px;
 }
 .wrapper::-webkit-scrollbar {
     display: none;

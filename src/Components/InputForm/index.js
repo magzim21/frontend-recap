@@ -6,7 +6,7 @@ const InputForm = () => {
   return (
     <div>
       <SavedWords />
-      <NewWordForm /> 
+      <NewWordForm />
     </div>
   );
 };

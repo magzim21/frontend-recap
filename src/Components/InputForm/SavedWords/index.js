@@ -1,38 +1,14 @@
 import React from "react";
 import SavedWord from "./SavedWord";
-import styles from './style.module.css'
+import styles from "./style.module.css";
+import useInputFormStore from "../store";
 
 const SavedWords = () => {
-  function saved_words() {
-    return [
-      "dismantling",
-      "docile",
-      "summon",
-      "tweak",
-      "disguise",
-      "its no wonder that",
-      "streak",
-      "severe jeopardy",
-      "federal bailout",
-      "flimsy",
-      "adulturated",
-      "bonanza",
-      "Do I have to furlough my workers?",
-      "blasphemy",
-      "cleave",
-      "debunk",
-      "incerator",
-      "dense buildings",
-      "pitfall",
-      "friendly nudge",
-      "pube",
-      "mfa fatigue",
-    ];
-  }
+  const words = useInputFormStore((state) => state.words);
 
   return (
     <div className={styles.wrapper}>
-      {saved_words().map((el) => (
+      {words.map((el) => (
         <SavedWord word={el} />
       ))}
     </div>

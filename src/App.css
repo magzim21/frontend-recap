@@ -5,12 +5,12 @@
   padding: 5% 0 0 0; /* what is the best way to do it?  */
   height: 100vh;
   /* height: 100%; */
+  flex-wrap: wrap;
 }
 
-
 .App > div {
-  height: 100%;
-  width: 27%;
+  width: 25%;
+  min-width: 400px;
   /* background-color: yellow; */
   overflow:scroll;
 }
