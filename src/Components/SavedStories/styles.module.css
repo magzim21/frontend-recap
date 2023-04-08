@@ -1,0 +1,9 @@
+.wrapper::-webkit-scrollbar {
+    display: none;
+}
+
+/* why  .wrapper > .card does not work? */
+.wrapper > div {
+    margin-bottom: 1vw;
+
+}

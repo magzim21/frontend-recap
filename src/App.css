@@ -1,5 +1,23 @@
 .App {
   display: flex;
   justify-content: space-evenly;
-  padding: 10px;
+  /* align-items: center;  */
+  padding: 5% 0 0 0; /* what is the best way to do it?  */
+  height: 100vh;
+  /* height: 100%; */
+}
+
+
+.App > div {
+  height: 100%;
+  width: 27%;
+  /* background-color: yellow; */
+  overflow:scroll;
+}
+
+
+
+/* hide scrollbar */
+.App > div::-webkit-scrollbar {
+   display: none;
 }

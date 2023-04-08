@@ -2,8 +2,12 @@
     display: flex;
     flex-wrap: wrap;
     align-items: space-evenly;
-    width: 30vw;
     gap: 10px;
-    max-height: 300px;
+    /* max-height: 300px; */
     overflow-y: scroll;
+}
+
+/* hide scrollbar */
+.wrapper::-webkit-scrollbar {
+    display: none;
 }

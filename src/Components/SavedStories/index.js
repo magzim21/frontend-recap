@@ -1,5 +1,6 @@
 import React from "react";
 import Story from "../Story";
+import styles from "./styles.module.css";
 
 const SavedStories = () => {
   
@@ -11,7 +12,13 @@ const SavedStories = () => {
     ];
   }
 
-  return <div>{request().map(el => {return <Story text={el}/>})}</div>;
+  return (
+    <div className={styles.wrapper}>
+      {request().map((el) => {
+        return <Story text={el} />;
+      })}
+    </div>
+  );
 };
 
 export default SavedStories;

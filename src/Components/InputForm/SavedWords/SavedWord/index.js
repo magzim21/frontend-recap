@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import styles from "./styles.module.css";
 
 const SavedWord = ({ word }) => {
   const [active, setActive] = useState(false);
