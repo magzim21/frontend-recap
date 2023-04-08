@@ -35,7 +35,7 @@ const useInputFormStore = create((set) => ({
   addWord: (word) =>
     set((state) => ({
       words:
-        state.words.includes(word) && word.length === 0
+        state.words.includes(word) || word.length === 0
           ? state.words
           : [...state.words, word],
     })),
