@@ -3,28 +3,37 @@ import useInputFormStore from "../store";
 
 const NewWordForm = () => {
   const addWord = useInputFormStore((state) => state.addWord);
-  const removeWord = useInputFormStore((state) => state.removeWord);
+  const removeActiveWords = useInputFormStore((state) => state.removeActiveWords);
 
   const [word, setWord] = useState('');
 
   return (
     <div className="mt-4">
-      <div class="input-group mb-3">
-        <button class="btn btn-outline-success" type="button" onClick={() => {
-          addWord(word)
-          setWord('')
-        }}>
+      <button
+        className="btn btn-outline-danger"
+        type="button"
+        onClick={() => {
+          removeActiveWords();
+          console.log(word);
+          setWord("");
+        }}
+      >
+        Remove
+      </button>
+      <div className="input-group mb-3">
+        <button
+          className="btn btn-outline-success"
+          type="button"
+          onClick={() => {
+            addWord(word);
+            setWord("");
+          }}
+        >
           Add
-        </button>
-        <button class="btn btn-outline-danger" type="button" onClick={() => {
-          removeWord(word)
-          setWord('')
-        }}>
-          Remove
         </button>
         <input
           type="text"
-          class="form-control"
+          className="form-control"
           placeholder=""
           value={word}
           aria-label="Example text with two button addons"

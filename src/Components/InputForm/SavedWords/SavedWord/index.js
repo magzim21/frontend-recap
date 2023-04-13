@@ -1,26 +1,27 @@
 import React, { useState } from "react";
-import styles from "./styles.module.css";
+// import styles from "./styles.module.css";
 import useInputFormStore from "../../store";
 
 const SavedWord = ({ word }) => {
-  const [active, setActive] = useState(false);
-
-  const addActiveWord = useInputFormStore((state) => state.addActiveWord);
-  const removeActiveWord = useInputFormStore((state) => state.removeActiveWord);
+  // ask // why this does not work?
+  // const { word, className } = props;
+  const toggleActiveWord = useInputFormStore((state) => state.toggleActiveWord);
 
   function toggle_word() {
-    active ? removeActiveWord(word) : addActiveWord(word);
-    setActive(!active);
+    word.active = word.active ? false : true;
+    // setActive(!active);
   }
 
   return (
     <div
       onClick={() => {
-        toggle_word();
+        console.log("click");
+        toggleActiveWord(word);
       }}
-      className={`${active ? "btn btn-primary" : "btn btn-outline-primary"}`}
+      className={`${word.active ? "btn btn-primary" : "btn btn-outline-primary"}`}
+
     >
-      {word}
+      {word.id}
     </div>
   );
 };

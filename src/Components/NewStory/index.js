@@ -7,10 +7,10 @@ const NewStory = () => {
     <div>
       <NewGeneratedStory />
       <div className={styled.app}>
-        <button type="button" class="btn btn-success">
+        <button type="button" className="btn btn-success">
           Save
         </button>
-        <button type="button" class="btn btn-danger">
+        <button type="button" className="btn btn-danger">
           Regenerate
         </button>
       </div>

@@ -1,12 +1,25 @@
 import React, { useEffect } from "react";
+import useStoryStore from "../../Components/SavedStories/store";
+import useInputFormStore from "../../Components/InputForm/store";
+
+
+
 
 const Wrapper = ({ children }) => {
 
-  /*Ниже напиши код, который будет доставать из двух разных store-ов две разные функции: функцию сохранения историй в состояние и функцию сохранения слов в состояние*/
+  const addNewStories = useStoryStore((state) => {
+    return state.addNewStories;
+  });
+  const saveWords = useInputFormStore((state) => { return state.addWords });
 
   useEffect(() => {
     /*Внутри тела функции напиши код для запроса и обработки API, который после запроса будет сохранять все в состояние*/
-    (async () => {})();
+    (async () => {
+      // api request 1
+      // api request 2
+      // save resiult of requst 1 to the global state
+      // save resiult of requst 2 to the global state
+    })(); // анонимная самовызывающаяся функция  //  immediately invoked function expression (IIFE)
   }, []);
 
   return <div>{children}</div>;

@@ -6,10 +6,17 @@ import useInputFormStore from "../store";
 const SavedWords = () => {
   const words = useInputFormStore((state) => state.words);
 
+
+
   return (
     <div className={styles.wrapper}>
-      {words.map((el) => (
-        <SavedWord word={el} />
+      {words.map((el, index) => (
+        <SavedWord
+          // ask // why can't we use on click here and how to use it
+          // className="btn"
+          key={index}
+          word={el}
+        />
       ))}
     </div>
   );
