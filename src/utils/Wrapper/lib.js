@@ -29,6 +29,19 @@ class NewStoryLib {
 
     return response;
   }
+
+  async get_words() {
+    const res = await axios({
+      method: "get",
+      url: "https://back_max-1-x0007391.deta.app/get_words",
+      headers: {
+        "Cookie": "deta_app_token=3PiyDCYs7jFxWrBY5xClkLvA5TMUJR7MzZjjjjMiME8IIGrg",
+        
+      },
+    });
+    console.log(res);
+    return res.data;
+  }
 }
 
 export default new NewStoryLib("/*YOU API KEY HERE*/");

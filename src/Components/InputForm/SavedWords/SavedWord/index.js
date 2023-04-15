@@ -3,14 +3,8 @@ import React, { useState } from "react";
 import useInputFormStore from "../../store";
 
 const SavedWord = ({ word }) => {
-  // ask // why this does not work?
-  // const { word, className } = props;
-  const toggleActiveWord = useInputFormStore((state) => state.toggleActiveWord);
 
-  function toggle_word() {
-    word.active = word.active ? false : true;
-    // setActive(!active);
-  }
+  const toggleActiveWord = useInputFormStore((state) => state.toggleActiveWord);
 
   return (
     <div
